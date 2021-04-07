@@ -1,0 +1,14 @@
+.Face {
+    display: flex;
+    justify-content: space-around;
+    background-color: #3d3939;
+    height: 92vh;
+}
+
+.color {
+    color: #d7d7d7;
+}
+
+.big {
+    font-size: 80px;
+}
