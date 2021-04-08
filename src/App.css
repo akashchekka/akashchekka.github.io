@@ -1,25 +1,28 @@
-.App {
-    /* background-color: #3d3939; */
-    height: 100vh;
-}
+@media only screen and (min-width: 800px) {
+    .App {
+        /* background-color: #3d3939; */
+        height: 100vh;
+        width: 100vw;
+    }
 
-.Nav {
-    background-color: #3d3939;
-}
+    .Nav {
+        background-color: #3d3939;
+    }
 
-.NavPos {
-    padding-right: 50px;
-}
+    .NavPos {
+        padding-right: 50px;
+    }
 
-.effect::after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 1px;
-    background: #d7d7d7;
-    transition: width .3s ease-out;
-}
+    .effect::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 1px;
+        background: #d7d7d7;
+        transition: width .3s ease-out;
+    }
 
-.effect:hover::after {
-    width: 100%;
+    .effect:hover::after {
+        width: 100%;
+    }
 }

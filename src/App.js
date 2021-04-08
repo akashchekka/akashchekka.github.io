@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import NavLink from "react-bootstrap/NavLink"
 import Routes from "./Routes"
 import "./App.css";
-import { useHistory, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
@@ -18,7 +18,8 @@ function App() {
               </h3>
             </Navbar.Brand>
           </Link>
-          <Navbar.Collapse className="justify-content-end NavPos">
+          <Navbar.Toggle />
+          <Navbar.Collapse className="justify-content-end" style={{paddingRight: 50}}>
             <Nav activeKey={window.location.pathname}>
                 <NavLink className="effect" style={{color: '#d7d7d7'}}>About</NavLink>
                 <NavLink className="effect" style={{color: '#d7d7d7'}}>Blog</NavLink>
