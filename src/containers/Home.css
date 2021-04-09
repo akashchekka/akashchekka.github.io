@@ -5,7 +5,7 @@
         /* background-color: #3d3939; */
         background: linear-gradient(173deg, #3d3939 70%, #363232 calc(70% + 2px));
         height: 92vh;
-        width: 100vw;
+        /* width: 100vw; */
     }
 
     .color {
@@ -30,34 +30,40 @@
     }
 
     /*
-        ABOUT
+        Tech
     */
 
-    .About {
+    .Tech {
         display: flex;
-        justify-content: space-around;
+        flex-direction: column;
         /* background-color: #3d3939; */
         background: linear-gradient(-173deg, #363232 70%, #352d2d calc(70% + 2px));
         height: 92vh;
-        width: 100vw;
+        /* width: 100vw; */
         padding-top: 30px;
     }
 
+    .tech-head {
+        align-self: center;
+        color: #d7d7d7;
+    }
+
     .card {
-        background: rgba( 255, 255, 255, 0.10 );
-        box-shadow: 0 8px 20px 0 rgba(156, 157, 161, 0.37);
+        background: rgba( 255, 255, 255, 0.1 );
         backdrop-filter: blur( 5.0px );
         -webkit-backdrop-filter: blur( 5.0px );
         border-radius: 10px;
         border: 1px solid rgba( 255, 255, 255, 0.18 );
     }
 
-    .card-text {
+    .card-text, .card-title {
         color: #d7d7d7;
     }
 
-    .card-title {
-        color: #d7d7d7;
+    .cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
     }
 }
 
@@ -80,11 +86,20 @@
         font-size: x-large;
     }
 
-    .icons {
+    /* .icons {
         flex-direction: column;
         align-self: center;
         padding-left: 10px;
         padding-right: 30px;
+    } */
+
+    .mob {
+        width: 0px;
+        height: 0px;
+    }
+
+    .mob1 {
+        margin-left: 20px;
     }
 
     .big {
@@ -97,17 +112,21 @@
     }
 
     /*
-        ABOUT
+        Tech
     */
 
-    .About {
+    .Tech {
         display: flex;
-        justify-content: space-around;
-        /* background-color: #3d3939; */
+        flex-direction: column;
         background: linear-gradient(-173deg, #363232 70%, #352d2d calc(70% + 2px));
-        height: 92vh;
+        height: 160vh;
         width: 100vw;
         padding-top: 30px;
+    }
+
+    .tech-head {
+        align-self: center;
+        color: #d7d7d7;
     }
 
     .card {
@@ -117,6 +136,15 @@
         -webkit-backdrop-filter: blur( 2.0px );
         border-radius: 10px;
         border: 1px solid rgba( 255, 255, 255, 0.18 );
+        margin-top: 40px;
+    }
+
+    .suffice {
+        margin-top: 0px;
+    }
+
+    .cards {
+        align-self: center;
     }
 
     .card-text {

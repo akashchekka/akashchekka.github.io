@@ -1,8 +1,8 @@
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1080px) {
     .App {
         /* background-color: #3d3939; */
         height: 100vh;
-        width: 100vw;
+        /* width: 100vw; */
     }
 
     .Nav {
@@ -24,5 +24,11 @@
 
     .effect:hover::after {
         width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1080px) {
+    .Nav {
+        background-color: #3d3939;
     }
 }
