@@ -1,19 +1,20 @@
 @media only screen and (min-width: 1080px) {
+    /*
+        FACE
+    */
     .Face {
         display: flex;
         justify-content: space-around;
-        /* background-color: #3d3939; */
-        background: linear-gradient(173deg, #3d3939 70%, #363232 calc(70% + 2px));
+        background: linear-gradient(173deg, var(--primary) 70%, var(--secondary) calc(70% + 2px));
         height: 92vh;
-        /* width: 100vw; */
     }
 
     .color {
-        color: #d7d7d7;
+        color: var(--text);
     }
 
     .big {
-        font-size: 80px;
+        font-size: 60px;
     }
 
     .icons {
@@ -36,16 +37,14 @@
     .Tech {
         display: flex;
         flex-direction: column;
-        /* background-color: #3d3939; */
-        background: linear-gradient(-173deg, #363232 70%, #352d2d calc(70% + 2px));
+        background: linear-gradient(-173deg, var(--secondary) 70%, var(--tertiary) calc(70% + 2px));
         height: 92vh;
-        /* width: 100vw; */
         padding-top: 30px;
     }
 
     .tech-head {
         align-self: center;
-        color: #d7d7d7;
+        color: var(--text);
     }
 
     .card {
@@ -57,7 +56,7 @@
     }
 
     .card-text, .card-title {
-        color: #d7d7d7;
+        color: var(--text);
     }
 
     .cards {
@@ -65,45 +64,77 @@
         flex-direction: row;
         justify-content: space-around;
     }
+
+    /*
+        CONTACT
+    */
+
+    .Contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        background: linear-gradient(173deg, var(--tertiary) 70%, var(--secondary) calc(70% + 2px));
+    }
+
+    .formcard {
+        justify-content: center;
+        width: 700px;
+        height: 450px;
+    }
+    
+    .Contact form {
+        margin: 0 auto;
+        width: 600px;
+    }
+
+    .textarea {
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+    }
+
+    .form-row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    
+    
 }
 
 @media only screen and (max-width: 1080px) {
     .Face {
         display: flex;
         justify-content: space-around;
-        /* background-color: #3d3939; */
-        background: linear-gradient(173deg, #3d3939 70%, #363232 calc(70% + 2px));
+        background: linear-gradient(173deg, var(--primary) 70%, var(--secondary) calc(70% + 2px));
         height: 92vh;
         width: 100vw;
     }
 
     .color {
-        color: #d7d7d7;
+        color: var(--text);
     }
 
     .icon {
         cursor: pointer;
-        font-size: x-large;
+        font-size: large;
+        margin-left: 3px;
     }
 
-    /* .icons {
+    .icons {
         flex-direction: column;
         align-self: center;
         padding-left: 10px;
         padding-right: 30px;
-    } */
-
-    .mob {
-        width: 0px;
-        height: 0px;
     }
 
     .mob1 {
-        margin-left: 20px;
+        margin-left: 10px;
+        margin-right: 5px;
     }
 
     .big {
-        font-size: 80px;
+        font-size: 50px;
     }
 
     .image {
@@ -118,7 +149,7 @@
     .Tech {
         display: flex;
         flex-direction: column;
-        background: linear-gradient(-173deg, #363232 70%, #352d2d calc(70% + 2px));
+        background: linear-gradient(-173deg, var(--secondary) 70%, var(--tertiary) calc(70% + 2px));
         height: 160vh;
         width: 100vw;
         padding-top: 30px;
@@ -126,7 +157,7 @@
 
     .tech-head {
         align-self: center;
-        color: #d7d7d7;
+        color: var(--text);
     }
 
     .card {
@@ -148,11 +179,43 @@
     }
 
     .card-text {
-        color: #d7d7d7;
+        color: var(--text);
     }
 
     .card-title {
-        color: #d7d7d7;
+        color: var(--text);
+    }
+
+    /*
+        CONTACT
+    */
+
+    .Contact {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 90vh;
+        background: linear-gradient(173deg, var(--tertiary) 70%, var(--secondary) calc(70% + 2px));
+    }
+
+    .Contact form {
+        margin: 0 auto;
+        width: 250px;
+    }
+
+    .textarea {
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+    }
+
+    .formcard {
+        justify-content: center;
+        width: 300px;
+        height: 450px;
+    }
+
+    .mob3 {
+        flex-direction: column;
     }
 }
 

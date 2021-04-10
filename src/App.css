@@ -1,9 +1,15 @@
+.App {
+    /* background-color: #3d3939; */
+    height: 100vh;
+    /* width: 100vw; */
+    --text: #d7d7d7;
+    --primary: #3d3939;
+    --secondary: #363232;
+    --tertiary: #2e2929;
+}
+
 @media only screen and (min-width: 1080px) {
-    .App {
-        /* background-color: #3d3939; */
-        height: 100vh;
-        /* width: 100vw; */
-    }
+    
 
     .Nav {
         background-color: #3d3939;

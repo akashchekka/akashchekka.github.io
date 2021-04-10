@@ -1,15 +1,10 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #3d3939;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-family: "Open Sans", sans-serif;
 }
-
-/* html {
-  scroll-behavior: smooth;
-} */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -18,6 +13,10 @@ code {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "PT Serif", serif;
+}
+
+input[type="text"]::-webkit-input-placeholder {
+  color: #d7d7d7;
 }
 
 select.form-control,
