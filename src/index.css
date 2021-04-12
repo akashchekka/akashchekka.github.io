@@ -21,9 +21,9 @@ input[type="text"]::-webkit-input-placeholder {
 
 select.form-control,
 textarea.form-control,
-input.form-control {
+input.form-control,
+textarea:focus.form-control,
+input:focus.form-control {
   font-size: 1rem;
-}
-input[type=file] {
-  width: 100%;
+  color: #d7d7d7;
 }

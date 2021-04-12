@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
 import Card from 'react-bootstrap/Card'
 import LoaderButton from '../components/LoaderButton'
-import { Linkedin, Github, Instagram } from 'react-bootstrap-icons'
+import { Linkedin, Github, Instagram, Twitter } from 'react-bootstrap-icons'
 import { useFormFields } from '../lib/hooksLib'
 import Jumbotron from '../bg.png'
 import { useRefContext } from '../lib/context'
@@ -15,17 +15,22 @@ const Icons = () => {
         <div className="icons">
             <div style={{paddingBottom: 10}}>
                 <a href="https://www.linkedin.com/in/akashchekka/" target="_blank" rel="noopener noreferrer">
-                    <Linkedin className="color icon mob"/>
+                    <Linkedin className="color mob"/>
                 </a>
             </div>
             <div style={{paddingBottom: 10}}>
                 <a href="https://github.com/Akash76" target="_blank" rel="noopener noreferrer">
-                    <Github className="color icon mob"/>
+                    <Github className="color mob"/>
                 </a>             
             </div>
-            <div>
+            <div style={{paddingBottom: 10}}>
                 <a href="https://www.instagram.com/133_akash/" target="_blank" rel="noopener noreferrer">
-                    <Instagram className="color icon mob"/>               
+                    <Instagram className="color mob"/>               
+                </a>
+            </div>
+            <div>
+                <a href="https://twitter.com/AkashChekka" target="_blank" rel="noopener noreferrer">
+                    <Twitter className="color mob"/>               
                 </a>
             </div>
         </div>
@@ -33,15 +38,15 @@ const Icons = () => {
 }
 
 const Face = () => {
-    // console.log(window)
+    const { homeRef, contactScroll } = useRefContext()
     return (
-        <div className="Face">
+        <div className="Face" ref={homeRef}>
             <Icons />
             <div style={{alignSelf: 'center'}} className="mob1">
                 <h3 className="color">Hi, This is Akash!</h3>
                 <p className="color big">I'm a Full Stack Developer</p>
                 <Button>Know me</Button>
-                <Button variant="success" style={{marginLeft: 20}}>Hire me</Button>
+                <Button variant="success" style={{marginLeft: 20}} onClick={() => contactScroll()}>Hire me</Button>
             </div>
             <Image className="image" src={Jumbotron}/>
         </div>
@@ -49,10 +54,8 @@ const Face = () => {
 }
 
 const Tech = () => {
-
-    const { techRef } = useRefContext()
     return (
-        <div className="Tech" ref={techRef}>
+        <div className="Tech">
             <h3 className="tech-head" style={{fontSize: 50, paddingBottom: 50}}>Tech Stack</h3>  
             <div className="cards">
                 <Card style={{ width: '18rem', height: '20rem' }} className="card suffice">
@@ -94,6 +97,7 @@ const Tech = () => {
 }
 
 const Contact = () => {
+    const { contactRef } = useRefContext()
     const [isLoading, setIsLoading] = useState(false)
     const [fields, handleFieldChange] = useFormFields({
         name: "",
@@ -104,10 +108,9 @@ const Contact = () => {
         console.log("OK")
     }
     return (
-        <div className="Contact">
-
-            <Card className="card formcard">
-            <h3 className="tech-head" style={{fontSize: 50, paddingBottom: 50}}>Contact</h3>  
+        <div className="Contact" ref={contactRef}>
+            <div className="card formcard">
+                <h3 className="tech-head" style={{fontSize: 50, paddingBottom: 50}}>Contact</h3>  
                 <Form onSubmit={handleSubmit}>
                     <div style={{display: 'flex', justifyContent: 'space-between'}} className="mob3">
                         <Form.Group size="lg" controlId="name">
@@ -152,7 +155,16 @@ const Contact = () => {
                         Submit
                     </LoaderButton>
                 </Form>
-            </Card>
+            </div>
+            <div className="details">
+                <div>
+                    <p>Akash Chekka</p>
+                    <p>+91 - (765)992-3589</p>
+                    <p>chekkaakash@protonmail.com</p>
+                </div>
+                <div><Icons /></div>
+            </div>
+            
         </div>
     )
 }

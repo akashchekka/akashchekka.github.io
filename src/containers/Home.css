@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 800px) {
     /*
         FACE
     */
@@ -6,7 +6,7 @@
         display: flex;
         justify-content: space-around;
         background: linear-gradient(173deg, var(--primary) 70%, var(--secondary) calc(70% + 2px));
-        height: 92vh;
+        height: 100vh;
     }
 
     .color {
@@ -36,10 +36,10 @@
 
     .Tech {
         display: flex;
+        justify-content: center;
         flex-direction: column;
         background: linear-gradient(-173deg, var(--secondary) 70%, var(--tertiary) calc(70% + 2px));
-        height: 92vh;
-        padding-top: 30px;
+        height: 100vh;
     }
 
     .tech-head {
@@ -74,14 +74,14 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        height: 90vh;
+        height: 100vh;
         background: linear-gradient(173deg, var(--tertiary) 70%, var(--secondary) calc(70% + 2px));
     }
 
     .formcard {
         justify-content: center;
         width: 700px;
-        height: 450px;
+        padding-bottom: 30px;
     }
     
     .Contact form {
@@ -93,16 +93,21 @@
         border: 1px solid rgba( 255, 255, 255, 0.18 );
     }
 
-    .form-row {
+    .details {
         display: flex;
         flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        padding-top: 100px;
     }
 
-    
+    p {
+        color: var(--text);
+    }
     
 }
 
-@media only screen and (max-width: 1080px) {
+@media only screen and (max-width: 800px) {
     .Face {
         display: flex;
         justify-content: space-around;
@@ -205,7 +210,7 @@
     }
 
     .textarea {
-        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        border: 1px solid rgba(255, 255, 255, 0.18);
     }
 
     .formcard {
@@ -216,6 +221,18 @@
 
     .mob3 {
         flex-direction: column;
+    }
+
+    .details {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        padding-top: 100px;
+    }
+
+    p {
+        color: var(--text);
     }
 }
 
