@@ -10,9 +10,11 @@ function App() {
 
   const contactRef = useRef(null)
   const homeRef = useRef(null)
+  const aboutRef = useRef(null)
 
   const contactScroll = () => contactRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
   const homeScroll = () => homeRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  const aboutScroll = () => aboutRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
 
   return (
     <div className="App">
@@ -28,13 +30,13 @@ function App() {
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end" style={{paddingRight: 50}}>
             <Nav activeKey={window.location.pathname}>
-                <Nav.Link onClick={() => contactScroll()} className="effect" style={{color: '#d7d7d7'}}>Contact</Nav.Link>
+                <Nav.Link onClick={() => contactScroll()} className="effect" style={{color: '#d7d7d7'}}>Connect</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
       </div>
-      <div className="routes">
-        <RefContext.Provider value={{contactRef, homeRef, contactScroll}}>
+      <div>
+        <RefContext.Provider value={{contactRef, homeRef, aboutRef, contactScroll, aboutScroll}}>
           <Routes />
         </RefContext.Provider>
       </div>

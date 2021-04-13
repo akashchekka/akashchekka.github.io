@@ -8,6 +8,15 @@
     --tertiary: #2e2929;
 }
 
+.navbar-toggler-icon {
+    -webkit-filter: invert(100%);
+    filter: invert(1);
+}
+
+.navbar-light .navbar-toggler {
+    border-color: 'transparent';
+}
+
 @media only screen and (min-width: 800px) {
     .Nav {
         background-color: 'transparent';
