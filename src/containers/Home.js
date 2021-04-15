@@ -7,7 +7,10 @@ import Card from 'react-bootstrap/Card'
 import LoaderButton from '../components/LoaderButton'
 import { Linkedin, Github, Instagram, Twitter } from 'react-bootstrap-icons'
 import { useFormFields } from '../lib/hooksLib'
-import Jumbotron from '../bg.png'
+import Jumbotron from '../bg.webp'
+import Dockerps from '../docker-ps.webp'
+import Query from '../query.webp'
+import Hfdrm from '../hfdrm.webp'
 import { useRefContext } from '../lib/context'
 
 const Icons = () => {
@@ -58,8 +61,8 @@ const About = () => {
     return (
         <div className="About" ref={aboutRef}>
             <h3 className="big" style={{alignSelf: 'center'}}>About Akash</h3>
-            <div className="content">
-                <p>I am a self learned developer having ... 2+ years experience in IT industry and more than 3 years technical experience. I have started my professional career with blockchain technology mostly worked on hyperledger fabric and hyperledger sawtooth frameworks. I have done many projects on top of hyperledger fabric which includes chaincode development, creating fabric networks, API development for interacting with fabric network. Apart from that I have done project on sensor data storage system using hyperledger sawtooth. In TCS I have been an active member of mobile security team where we do security assessments for various API, web and mobile applications. As a part of that I worked with serverless API security and web application security thereby providing the best recommendations. I have been as full stack developer where I developed a complex MERN application to store and track vulnerability assessment data. My areas of interest include blockchain, cloud, web development and quantum technologies.</p>
+            <div className="content" style={{alignSelf: 'center'}}>
+                <p>I am a self learned developer having ... 2+ years experience in IT industry and more than 3 years technical experience. I have started my professional career with blockchain technology mostly worked on hyperledger fabric and hyperledger sawtooth frameworks. I have done many projects on top of hyperledger fabric which includes chaincode development, creating fabric networks, API development for interacting with fabric network. Apart from that I have done project on sensor data storage system using hyperledger sawtooth. In TCS I have been an active member of mobile security team where we do security assessments for various API, web and mobile applications. As a part of that I worked with serverless API security and web application security thereby providing the best recommendations. I developed a MERN application to store and track vulnerability assessment data. My areas of interest include blockchain, cyber security, cloud and web development</p>
             </div>
         </div>
     )
@@ -68,9 +71,9 @@ const About = () => {
 const Tech = () => {
     return (
         <div className="Tech">
-            <h3 className="tech-head" style={{fontSize: 50, paddingBottom: 50}}>Tech Stack</h3>  
+            <h3 style={{fontSize: 50, textAlign: 'center'}}>Tech Stack</h3>  
             <div className="cards">
-                <Card style={{ width: '18rem', height: '23rem' }} className="card suffice">
+                <Card style={{ width: '18rem', height: '23rem' }} className="suffice">
                     {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
                     <Card.Body>
                         <Card.Title>Programming Languages</Card.Title>
@@ -84,7 +87,7 @@ const Tech = () => {
                     </Card.Body>
                 </Card>
 
-                <Card style={{ width: '18rem', height: '23rem' }} className="card">
+                <Card style={{ width: '18rem', height: '23rem' }}>
                     <Card.Body>
                         <Card.Title>Technologies/Frameworks</Card.Title>
                         <Card.Text as="div">
@@ -98,6 +101,52 @@ const Tech = () => {
                         </Card.Text>
                     </Card.Body>
                 </Card>
+            </div>
+        </div>
+    )
+}
+
+const Blogs = () => {
+    return (
+        <div className="Blogs">
+            <h3 style={{fontSize: 50, textAlign: 'center'}}>My Works!!!</h3>
+            <div className="blog-cards">
+                <a href="https://akash76.github.io/hfl-data-extraction/" style={{textDecoration: 'none'}} target="_blank" rel="noopener noreferrer">
+                    <Card style={{ width: '18rem', height: '23rem'}} className="blog-card suffice">
+                        <Card.Img variant="top" style={{height: 180, padding: 5, borderRadius: 10}} src={Dockerps} />
+                        <Card.Body>
+                            <Card.Title>Ledger Data Extraction in Hyperledger Fabric</Card.Title>
+                            <Card.Text>
+                                Showing how one can extract data in Hyperledger Fabric without being network participant!
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </a >
+                    
+                <a href="https://akash76.github.io/hlfgql/" style={{textDecoration: 'none'}} target="_blank" rel="noopener noreferrer">
+                    <Card style={{ width: '18rem', height: '23rem'}} className="blog-card suffice">
+                        <Card.Img variant="top" style={{height: 180, padding: 5, borderRadius: 10}} src={Query} />
+                        <Card.Body>
+                            <Card.Title>Ultra Rich Queries on Hyperledger Fabric using GraphQL</Card.Title>
+                            <Card.Text>
+                                Implementing GraphQL Queries and Mutations on Hyperledger Fabric
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </a >
+
+                <a href="https://www.skcript.com/svr/hyperledger-fabric-disaster-recovery-methods/" style={{textDecoration: 'none'}} target="_blank" rel="noopener noreferrer">
+                    <Card style={{ width: '18rem', height: '23rem'}} className="blog-card suffice">
+                        <Card.Img variant="top" style={{height: 180, padding: 5, borderRadius: 10}} src={Hfdrm} />
+                        <Card.Body>
+                            <Card.Title>Hyperledger Fabric Disaster Recovery Methods</Card.Title>
+                            <Card.Text>
+                                Ledger backup mechanism on hyperledger fabric
+                            </Card.Text>
+                        </Card.Body>
+                    </Card>
+                </a >
+
             </div>
         </div>
     )
@@ -121,7 +170,7 @@ const Contact = () => {
     return (
         <div className="Contact" ref={contactRef}>
             <div className="card formcard">
-                <h3 className="tech-head" style={{fontSize: 50, paddingTop: 20, paddingBottom: 50}}>Connect</h3>  
+                <h3 className="head" style={{ textAlign: 'center', paddingTop: 20, paddingBottom: 50}}>Connect with me</h3>  
                 <Form onSubmit={handleSubmit}>
                     <div style={{display: 'flex', justifyContent: 'space-between'}} className="mob3">
                         <Form.Group size="lg" controlId="name">
@@ -191,6 +240,7 @@ function Home() {
             <Face />
             <About />
             <Tech />
+            <Blogs />
             <Contact />
         </div>
     )
