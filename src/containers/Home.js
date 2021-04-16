@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './Home.css'
+import './Home-mob.css'
+import { useForm } from 'react-hook-form';
 import Image from 'react-bootstrap/Image'
 import Button from 'react-bootstrap/Button'
 import Form from 'react-bootstrap/Form'
@@ -11,6 +13,7 @@ import Jumbotron from '../bg.webp'
 import Dockerps from '../docker-ps.webp'
 import Query from '../query.webp'
 import Hfdrm from '../hfdrm.webp'
+import Tetrad from '../tetrad.webp'
 import { useRefContext } from '../lib/context'
 
 const Icons = () => {
@@ -106,47 +109,54 @@ const Tech = () => {
     )
 }
 
-const Blogs = () => {
+const Work = ({link, title, text, img}) => {
     return (
-        <div className="Blogs">
+            <Card style={{ width: '18rem', height: '23rem'}} className="work-card suffice">
+                <a href={link} style={{textDecoration: 'none'}} target="_blank" rel="noopener noreferrer">
+                    <Card.Img variant="top" className="card-img" src={img} />
+                </a >
+                <Card.Body>
+                    <Card.Title>{title}</Card.Title>
+                    <Card.Text>
+                        {text}
+                    </Card.Text>
+                </Card.Body>
+            </Card>
+    )
+}
+
+const Works = () => {
+    return (
+        <div className="Works">
             <h3 style={{fontSize: 50, textAlign: 'center'}}>My Works!!!</h3>
-            <div className="blog-cards">
-                <a href="https://akash76.github.io/hfl-data-extraction/" style={{textDecoration: 'none'}} target="_blank" rel="noopener noreferrer">
-                    <Card style={{ width: '18rem', height: '23rem'}} className="blog-card suffice">
-                        <Card.Img variant="top" style={{height: 180, padding: 5, borderRadius: 10}} src={Dockerps} />
-                        <Card.Body>
-                            <Card.Title>Ledger Data Extraction in Hyperledger Fabric</Card.Title>
-                            <Card.Text>
-                                Showing how one can extract data in Hyperledger Fabric without being network participant!
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
-                </a >
-                    
-                <a href="https://akash76.github.io/hlfgql/" style={{textDecoration: 'none'}} target="_blank" rel="noopener noreferrer">
-                    <Card style={{ width: '18rem', height: '23rem'}} className="blog-card suffice">
-                        <Card.Img variant="top" style={{height: 180, padding: 5, borderRadius: 10}} src={Query} />
-                        <Card.Body>
-                            <Card.Title>Ultra Rich Queries on Hyperledger Fabric using GraphQL</Card.Title>
-                            <Card.Text>
-                                Implementing GraphQL Queries and Mutations on Hyperledger Fabric
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
-                </a >
+            <div className="work-cards">
+                <Work
+                    link="https://akash76.github.io/hfl-data-extraction/"
+                    title="Ledger Data Extraction in Hyperledger Fabric"
+                    text="Showing how one can extract data in Hyperledger Fabric without being network participant!"
+                    img={Dockerps}
+                />
 
-                <a href="https://www.skcript.com/svr/hyperledger-fabric-disaster-recovery-methods/" style={{textDecoration: 'none'}} target="_blank" rel="noopener noreferrer">
-                    <Card style={{ width: '18rem', height: '23rem'}} className="blog-card suffice">
-                        <Card.Img variant="top" style={{height: 180, padding: 5, borderRadius: 10}} src={Hfdrm} />
-                        <Card.Body>
-                            <Card.Title>Hyperledger Fabric Disaster Recovery Methods</Card.Title>
-                            <Card.Text>
-                                Ledger backup mechanism on hyperledger fabric
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
-                </a >
+                <Work
+                    link="https://akash76.github.io/hlfgql/"
+                    title="Ultra Rich Queries on Hyperledger Fabric using GraphQL"
+                    text="Implementing GraphQL Queries and Mutations on Hyperledger Fabric"
+                    img={Query}
+                />
 
+                <Work
+                    link="https://www.skcript.com/svr/hyperledger-fabric-disaster-recovery-methods/"
+                    title="Hyperledger Fabric Disaster Recovery Methods"
+                    text="Ledger backup mechanism on hyperledger fabric"
+                    img={Hfdrm}
+                />
+
+                <Work
+                    link="https://tetradsquare.herokuapp.com/"
+                    title="Magic Squares generator"
+                    text="A web application which can generate all possible magic squares by giving date of birth"
+                    img={Tetrad}
+                />
             </div>
         </div>
     )
@@ -160,7 +170,7 @@ const Contact = () => {
         email: "",
         message: ""
     })
-    const handleSubmit = (e) => {
+    const onSubmit = (e) => {
         e.preventDefault()
         setIsLoading(true)
         console.log(fields)
@@ -171,11 +181,10 @@ const Contact = () => {
         <div className="Contact" ref={contactRef}>
             <div className="card formcard">
                 <h3 className="head" style={{ textAlign: 'center', paddingTop: 20, paddingBottom: 50}}>Connect with me</h3>  
-                <Form onSubmit={handleSubmit}>
+                <Form onSubmit={onSubmit}>
                     <div style={{display: 'flex', justifyContent: 'space-between'}} className="mob3">
                         <Form.Group size="lg" controlId="name">
                             <Form.Control
-                            // autoFocus
                             type="text"
                             value={fields.name}
                             placeholder="Name"
@@ -240,7 +249,7 @@ function Home() {
             <Face />
             <About />
             <Tech />
-            <Blogs />
+            <Works />
             <Contact />
         </div>
     )

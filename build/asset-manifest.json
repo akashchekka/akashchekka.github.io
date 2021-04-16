@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.2920c032.chunk.css",
+    "main.js": "/static/js/main.e35dcd8a.chunk.js",
+    "runtime-main.js": "/static/js/runtime-main.663551ff.js",
+    "static/css/2.0371faf3.chunk.css": "/static/css/2.0371faf3.chunk.css",
+    "static/js/2.fb054d42.chunk.js": "/static/js/2.fb054d42.chunk.js",
+    "static/js/3.d30753fd.chunk.js": "/static/js/3.d30753fd.chunk.js",
+    "static/css/4.702907a5.chunk.css": "/static/css/4.702907a5.chunk.css",
+    "static/js/4.3cf61a16.chunk.js": "/static/js/4.3cf61a16.chunk.js",
+    "static/js/5.f7a87d8c.chunk.js": "/static/js/5.f7a87d8c.chunk.js",
+    "static/js/6.2bf482cf.chunk.js": "/static/js/6.2bf482cf.chunk.js",
+    "static/js/7.c438fe5d.chunk.js": "/static/js/7.c438fe5d.chunk.js",
+    "index.html": "/index.html",
+    "static/js/2.fb054d42.chunk.js.LICENSE.txt": "/static/js/2.fb054d42.chunk.js.LICENSE.txt",
+    "static/media/bg.330e16fd.webp": "/static/media/bg.330e16fd.webp",
+    "static/media/docker-ps.3c3bcd0c.webp": "/static/media/docker-ps.3c3bcd0c.webp",
+    "static/media/hfdrm.8aa134fa.webp": "/static/media/hfdrm.8aa134fa.webp",
+    "static/media/query.3dfa328e.webp": "/static/media/query.3dfa328e.webp",
+    "static/media/tetrad.cd05c5dc.webp": "/static/media/tetrad.cd05c5dc.webp"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.663551ff.js",
+    "static/css/2.0371faf3.chunk.css",
+    "static/js/2.fb054d42.chunk.js",
+    "static/css/main.2920c032.chunk.css",
+    "static/js/main.e35dcd8a.chunk.js"
+  ]
+}
