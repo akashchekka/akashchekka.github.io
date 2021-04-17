@@ -20,17 +20,17 @@
     .icons {
         flex-direction: column;
         align-self: center;
-        padding-left: 10px;
+        padding-left: 20px;
         padding-right: 30px;
     }
 
     .mob1 {
-        margin-left: 10px;
+        margin-left: 20px;
         margin-right: 5px;
     }
 
     .big {
-        font-size: 50px;
+        font-size: 40px;
     }
 
     .image {

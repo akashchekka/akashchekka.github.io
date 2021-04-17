@@ -22,7 +22,7 @@ function App() {
         <Navbar collapseOnSelect expand="lg" fixed="top" className="NavBar">
           <Link to="/" onClick={() => homeScroll()}>
             <Navbar.Brand className="font-weight-bold text-muted">
-              <h3 style={{color: '#d7d7d7', fontFamily: 'Alice'}}>
+              <h3 className="logo">
                 A
               </h3>
             </Navbar.Brand>
@@ -30,6 +30,7 @@ function App() {
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end" style={{paddingRight: 50}}>
             <Nav activeKey={window.location.pathname}>
+                <Nav.Link href="https://drive.google.com/file/d/1Ye1KpUdjs78YWJu3Jtq81smM0aMeI7gY/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="effect" style={{color: '#d7d7d7'}}>Resume</Nav.Link>
                 <Nav.Link onClick={() => contactScroll()} className="effect" style={{color: '#d7d7d7'}}>Connect</Nav.Link>
             </Nav>
           </Navbar.Collapse>

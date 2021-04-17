@@ -21,22 +21,22 @@ const Icons = () => {
         <div className="icons">
             <div style={{paddingBottom: 10}}>
                 <a href="https://www.linkedin.com/in/akashchekka/" target="_blank" rel="noopener noreferrer">
-                    <Linkedin className="color mob"/>
+                    <Linkedin className="color"/>
                 </a>
             </div>
             <div style={{paddingBottom: 10}}>
                 <a href="https://github.com/Akash76" target="_blank" rel="noopener noreferrer">
-                    <Github className="color mob"/>
+                    <Github className="color"/>
                 </a>             
             </div>
             <div style={{paddingBottom: 10}}>
                 <a href="https://www.instagram.com/133_akash/" target="_blank" rel="noopener noreferrer">
-                    <Instagram className="color mob"/>               
+                    <Instagram className="color"/>               
                 </a>
             </div>
             <div>
                 <a href="https://twitter.com/AkashChekka" target="_blank" rel="noopener noreferrer">
-                    <Twitter className="color mob"/>               
+                    <Twitter className="color"/>               
                 </a>
             </div>
         </div>
@@ -49,8 +49,8 @@ const Face = () => {
         <div className="Face" ref={homeRef}>
             <Icons />
             <div style={{alignSelf: 'center'}} className="mob1">
-                <h3 className="color">Hi, This is Akash!</h3>
-                <p className="big">I'm a Full Stack Developer</p>
+                <p className="color big">Hi, This is Akash!</p>
+                <p>I'm a self learned developer having good experience in numerous cutting edge technologies which includes Blockchain, Web development, Cloud, Application Security</p>
                 <Button onClick={aboutScroll}>Know me</Button>
                 <Button variant="success" style={{marginLeft: 20}} onClick={() => {contactScroll()}}>Hire me</Button>
             </div>
@@ -65,7 +65,7 @@ const About = () => {
         <div className="About" ref={aboutRef}>
             <h3 className="big" style={{alignSelf: 'center'}}>About Akash</h3>
             <div className="content" style={{alignSelf: 'center'}}>
-                <p>I am a self learned developer having ... 2+ years experience in IT industry and more than 3 years technical experience. I have started my professional career with blockchain technology mostly worked on hyperledger fabric and hyperledger sawtooth frameworks. I have done many projects on top of hyperledger fabric which includes chaincode development, creating fabric networks, API development for interacting with fabric network. Apart from that I have done project on sensor data storage system using hyperledger sawtooth. In TCS I have been an active member of mobile security team where we do security assessments for various API, web and mobile applications. As a part of that I worked with serverless API security and web application security thereby providing the best recommendations. I developed a MERN application to store and track vulnerability assessment data. My areas of interest include blockchain, cyber security, cloud and web development</p>
+                <p>I am a self learned developer with extensive IT industry experience for over 2 years and technical experience for over 3 years. I have started my professional career with blockchain technology mostly worked on hyperledger fabric and hyperledger sawtooth frameworks. I have done many projects on top of hyperledger fabric which includes chaincode development, creating fabric networks, API development for interacting with fabric network. Apart from that I have done project on sensor data storage system using hyperledger sawtooth. In TCS I have been an active member of mobile security team where we do security assessments for various API, web and mobile applications. As a part of that I worked with serverless API security and web application security thereby providing the best recommendations for identified vulnerabilities. I developed a MERN application to store and track vulnerability assessment data. My areas of interest include blockchain, cyber security, cloud and web development</p>
             </div>
         </div>
     )
@@ -165,15 +165,23 @@ const Works = () => {
 const Contact = () => {
     const { contactRef } = useRefContext()
     const [isLoading, setIsLoading] = useState(false)
+    const [error, setError] = useState("")
     const [fields, handleFieldChange, reset] = useFormFields({
         name: "",
         email: "",
         message: ""
     })
-    const onSubmit = (e) => {
+
+    const onSubmit = async (e) => {
         e.preventDefault()
         setIsLoading(true)
-        console.log(fields)
+        var response = await fetch('http://localhost:3005/dev/sendDetails', {
+            method: 'POST',
+            mode: 'cors',
+            headers: { 'Accept': 'application/json' },
+            body: JSON.stringify(fields)
+        })
+        console.log(await response.json())
         setIsLoading(false)
         reset()
     }
@@ -239,11 +247,6 @@ const Contact = () => {
 }
 
 function Home() {
-
-    // useEffect(() => {
-    //     window.scrollTo(0, 0)
-    // }, [])
-
     return (
         <div className="Home">
             <Face />
