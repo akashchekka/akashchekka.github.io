@@ -14,7 +14,9 @@ import Dockerps from '../docker-ps.webp'
 import Query from '../query.webp'
 import Hfdrm from '../hfdrm.webp'
 import Tetrad from '../tetrad.webp'
+import Fabric from '../fabric.webp'
 import { useRefContext } from '../lib/context'
+import SnackBar from '../components/SnackBar'
 
 const Icons = () => {
     return (
@@ -50,7 +52,7 @@ const Face = () => {
             <Icons />
             <div style={{alignSelf: 'center'}} className="mob1">
                 <p className="color big">Hi, This is Akash!</p>
-                <p>I'm a self learned developer having good experience in numerous cutting edge technologies which includes Blockchain, Web development, Cloud, Application Security</p>
+                <p>I'm a self learned developer having good experience in numerous cutting edge technologies which includes Blockchain, Serverless, Web development, Cloud, GraphQL</p>
                 <Button onClick={aboutScroll}>Know me</Button>
                 <Button variant="success" style={{marginLeft: 20}} onClick={() => {contactScroll()}}>Hire me</Button>
             </div>
@@ -104,6 +106,17 @@ const Tech = () => {
                         </Card.Text>
                     </Card.Body>
                 </Card>
+
+                <Card style={{ width: '18rem', height: '23rem' }}>
+                    <Card.Body>
+                        <Card.Title>Tools</Card.Title>
+                        <Card.Text as="div">
+                            <p>Kali Linux</p>
+                            <p>Burpsuite</p>
+                            <p>Postman</p>
+                        </Card.Text>
+                    </Card.Body>
+                </Card>
             </div>
         </div>
     )
@@ -111,7 +124,7 @@ const Tech = () => {
 
 const Work = ({link, title, text, img}) => {
     return (
-            <Card style={{ width: '18rem', height: '23rem'}} className="work-card suffice">
+            <Card style={{ width: '18rem', height: '23rem', marginTop: 10}} className="work-card suffice">
                 <a href={link} style={{textDecoration: 'none'}} target="_blank" rel="noopener noreferrer">
                     <Card.Img variant="top" className="card-img" src={img} />
                 </a >
@@ -152,6 +165,13 @@ const Works = () => {
                 />
 
                 <Work
+                    link="https://github.com/Akash76/Axess"
+                    title="Axess"
+                    text="File transfer system on Hyperledger Fabric using IPFS"
+                    img={Fabric}
+                />
+
+                <Work
                     link="https://tetradsquare.herokuapp.com/"
                     title="Magic Squares generator"
                     text="A web application which can generate all possible magic squares by giving date of birth"
@@ -165,17 +185,25 @@ const Works = () => {
 const Contact = () => {
     const { contactRef } = useRefContext()
     const [isLoading, setIsLoading] = useState(false)
-    const [error, setError] = useState("")
+    const [open, setOpen] = useState(false)
     const [fields, handleFieldChange, reset] = useFormFields({
         name: "",
         email: "",
         message: ""
     })
 
+    const handleClose = (event, reason) => {
+        if (reason === 'clickaway') {
+          return;
+        }
+    
+        setOpen(false);
+    };
+
     const onSubmit = async (e) => {
         e.preventDefault()
         setIsLoading(true)
-        var response = await fetch('http://localhost:3005/dev/sendDetails', {
+        var response = await fetch(process.env.REACT_APP_API, {
             method: 'POST',
             mode: 'cors',
             headers: { 'Accept': 'application/json' },
@@ -183,6 +211,7 @@ const Contact = () => {
         })
         console.log(await response.json())
         setIsLoading(false)
+        setOpen(true)
         reset()
     }
     return (
@@ -233,6 +262,7 @@ const Contact = () => {
                     </LoaderButton>
                 </Form>
             </div>
+            <SnackBar open={open} message={'Thank you for message. Will get back to you soon!'} severity={'success'} handleClose={handleClose} />
             <div className="details">
                 <div>
                     <p>Akash Chekka</p>
@@ -241,7 +271,6 @@ const Contact = () => {
                 </div>
                 <div><Icons /></div>
             </div>
-            
         </div>
     )
 }

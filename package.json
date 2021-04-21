@@ -4,6 +4,8 @@
   "homepage": "http://akash76.github.io/",
   "private": true,
   "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/lab": "^4.0.0-alpha.57",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -21,7 +23,7 @@
   },
   "scripts": {
     "start": "PORT=3004 react-scripts start",
-    "predeploy": "GENERATE_SOURCEMAP=false react-scripts build",
+    "predeploy": "GENERATE_SOURCEMAP=false REACT_APP_API=https://f4gtehyutb.execute-api.ap-south-1.amazonaws.com/dev/sendDetails react-scripts build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
