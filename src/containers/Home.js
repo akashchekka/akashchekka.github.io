@@ -276,6 +276,14 @@ const Contact = () => {
     )
 }
 
+const Footer = () => {
+    return (
+        <div className="footer">
+            <h4 style={{ textAlign: 'center' }}> Developed with React </h4>
+        </div>
+    )
+}
+
 function Home() {
     return (
         <div className="Home">
@@ -284,6 +292,7 @@ function Home() {
             <Tech />
             <Works />
             <Contact />
+            <Footer />
         </div>
     )
 }
