@@ -80,7 +80,6 @@ const Tech = () => {
             <h3 style={{fontSize: 50, textAlign: 'center'}}>Tech Stack</h3>  
             <div className="cards">
                 <Card style={{ width: '18rem', height: '23rem' }} className="suffice">
-                    {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
                     <Card.Body>
                         <Card.Title>Programming Languages</Card.Title>
                         <Card.Text as="div">
@@ -101,7 +100,6 @@ const Tech = () => {
                             <p>AWS</p>
                             <p>Docker</p>
                             <p>React</p>
-                            <p>React Native</p>
                             <p>GraphQL</p>
                             <p>Serverless</p>
                         </Card.Text>
@@ -125,17 +123,17 @@ const Tech = () => {
 
 const Work = ({link, title, text, img}) => {
     return (
-            <Card style={{ width: '18rem', height: '23rem', marginTop: 10}} className="work-card suffice">
-                <a href={link} style={{textDecoration: 'none'}} target="_blank" rel="noopener noreferrer">
-                    <Card.Img variant="top" className="card-img" src={img} />
-                </a >
-                <Card.Body>
-                    <Card.Title>{title}</Card.Title>
-                    <Card.Text>
-                        {text}
-                    </Card.Text>
-                </Card.Body>
-            </Card>
+        <Card style={{ width: '18rem', height: '23rem', marginTop: 10}} className="work-card suffice">
+            <a href={link} style={{textDecoration: 'none'}} target="_blank" rel="noopener noreferrer">
+                <Card.Img variant="top" className="card-img" src={img} />
+            </a >
+            <Card.Body>
+                <Card.Title>{title}</Card.Title>
+                <Card.Text>
+                    {text}
+                </Card.Text>
+            </Card.Body>
+        </Card>
     )
 }
 
