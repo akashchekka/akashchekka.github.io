@@ -1,2 +1,2 @@
-echo $REACT_APP_API
-GENERATE_SOURCEMAP=false REACT_APP_API=$REACT_APP_API react-scripts build
+
+GENERATE_SOURCEMAP=false REACT_APP_API=<API> react-scripts build
