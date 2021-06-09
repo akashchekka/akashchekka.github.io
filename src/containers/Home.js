@@ -85,9 +85,9 @@ const Tech = () => {
                         <Card.Text as="div">
                             <p>C</p>
                             <p>C++</p>
+                            <p>Javascript</p>
                             <p>Node.js</p>
                             <p>Golang</p>
-                            <p>Python</p>
                         </Card.Text>
                     </Card.Body>
                 </Card>
@@ -96,6 +96,7 @@ const Tech = () => {
                     <Card.Body>
                         <Card.Title>Technologies/Frameworks</Card.Title>
                         <Card.Text as="div">
+                            <p>Blockchain</p>
                             <p>Hyperledger Fabric</p>
                             <p>AWS</p>
                             <p>Docker</p>
@@ -110,7 +111,6 @@ const Tech = () => {
                     <Card.Body>
                         <Card.Title>Tools</Card.Title>
                         <Card.Text as="div">
-                            <p>Kali Linux</p>
                             <p>Burpsuite</p>
                             <p>Postman</p>
                         </Card.Text>
