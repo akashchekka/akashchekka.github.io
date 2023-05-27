@@ -21,24 +21,24 @@ import SnackBar from '../components/SnackBar'
 const Icons = () => {
     return (
         <div className="icons">
-            <div style={{paddingBottom: 10}}>
+            <div style={{ paddingBottom: 10 }}>
                 <a href="https://www.linkedin.com/in/akashchekka/" target="_blank" rel="noopener noreferrer">
-                    <Linkedin className="color"/>
+                    <Linkedin className="color" />
                 </a>
             </div>
-            <div style={{paddingBottom: 10}}>
+            <div style={{ paddingBottom: 10 }}>
                 <a href="https://github.com/Akash76" target="_blank" rel="noopener noreferrer">
-                    <Github className="color"/>
-                </a>             
+                    <Github className="color" />
+                </a>
             </div>
-            <div style={{paddingBottom: 10}}>
+            <div style={{ paddingBottom: 10 }}>
                 <a href="https://www.instagram.com/133_akash/" target="_blank" rel="noopener noreferrer">
-                    <Instagram className="color"/>               
+                    <Instagram className="color" />
                 </a>
             </div>
             <div>
                 <a href="https://twitter.com/AkashChekka" target="_blank" rel="noopener noreferrer">
-                    <Twitter className="color"/>               
+                    <Twitter className="color" />
                 </a>
             </div>
         </div>
@@ -50,13 +50,12 @@ const Face = () => {
     return (
         <div className="Face" ref={homeRef}>
             <Icons />
-            <div style={{alignSelf: 'center'}} className="mob1">
-                <p className="color big">Hi, This is Akash!</p>
-                <p>I'm a self learned developer having good experience in numerous cutting edge technologies which includes Blockchain, Serverless, Cloud, GraphQL, Web development and Application security</p>
+            <div style={{ alignSelf: 'center' }} className="mob1">
+                <p className="color big">Heyy, This is Akash!</p>
+                <p className="larger">Welcome to my world! No one clicked good pic of me to show up here :( :) </p>
                 <Button onClick={aboutScroll}>Know me</Button>
-                <Button variant="success" style={{marginLeft: 20}} onClick={() => {contactScroll()}}>Hire me</Button>
             </div>
-            <Image className="image" src={Jumbotron}/>
+            <div className="image" />
         </div>
     )
 }
@@ -65,10 +64,21 @@ const About = () => {
     const { aboutRef } = useRefContext()
     return (
         <div className="About" ref={aboutRef}>
-            <h3 className="big" style={{alignSelf: 'center'}}>About Akash</h3>
-            <div className="content" style={{alignSelf: 'center'}}>
-                <p>With an extensive IT industry experience for over 2 years and technical experience for over 3 years, I am proficient in variable digital technologies. While I started my professional career experimenting Blockchain technology, I mostly worked on hyperledger fabric and hyperledger sawtooth frameworks. I've done many projects in compliance with hyperledger fabric that include chaincode development, creating fabric networks, API development for interacting with fabric network. Alongside, I did a project on sensor data storage system using hyperledger sawtooth. I am an active member of mobile security team in TCS where we conduct security assessments for various API, web and mobile applications. I've done my fair share in working with serverless API security and web application security thereby providing the best recommendations for identified vulnerabilities. Apart from that, I developed a MERN application to store and track vulnerability assessment data.</p>
-                <p>Contact me to know more about my work!</p>
+            <h3 className="big" style={{ alignSelf: 'center' }}>About meee!</h3>
+            <div className="content" style={{ alignSelf: 'center' }}>
+                <p>
+                    With four years of IT experience, I've explored various languages and technologies like JavaScript, Node.js, Golang, C#, React, React Native, and even delved into the fascinating world of blockchain. Additionally, I am currently working widely on Dotnet, SQL, and working with cloud platforms like Azure. Every day brings new opportunities to expand my skills and create innovative solutions.
+                </p>
+                <p>
+                    Photography is my creative outlet, where I explore different places, capturing the sparkling moments that catch my eye. From breathtaking landscapes to candid emotions, I freeze time and tell captivating stories through my lens.
+                </p>
+                <p>
+                    Having worked at TCS for two and a half years, I'm now proud to call Microsoft my home. The dynamic environment fuels my passion for growth and innovation, pushing me to excel in my career.
+                </p>
+                <p>
+                    Music is my constant companion, energizing my spirit. Though I have a go-to playlist, the melodies keep me in the perfect mood and inspire my creativity.
+                </p>
+                <p>Wanna know  me more??? Hit me up!</p>
             </div>
         </div>
     )
@@ -77,42 +87,31 @@ const About = () => {
 const Tech = () => {
     return (
         <div className="Tech">
-            <h3 style={{fontSize: 50, textAlign: 'center'}}>Tech Stack</h3>  
+            <h3 style={{ fontSize: 50, textAlign: 'center' }}>Tech Stack</h3>
             <div className="cards">
                 <Card style={{ width: '18rem', height: '23rem' }} className="suffice">
                     <Card.Body>
                         <Card.Title>Programming Languages</Card.Title>
                         <Card.Text as="div">
-                            <p>C</p>
-                            <p>C++</p>
                             <p>Javascript</p>
                             <p>Node.js</p>
                             <p>Golang</p>
+                            <p>Python</p>
+                            <p>C#</p>
                         </Card.Text>
                     </Card.Body>
                 </Card>
 
                 <Card style={{ width: '18rem', height: '23rem' }}>
                     <Card.Body>
-                        <Card.Title>Technologies/Frameworks</Card.Title>
+                        <Card.Title>Technologies</Card.Title>
                         <Card.Text as="div">
                             <p>Blockchain</p>
-                            <p>Hyperledger Fabric</p>
                             <p>AWS</p>
+                            <p>Azure</p>
                             <p>Docker</p>
                             <p>React</p>
                             <p>GraphQL</p>
-                            <p>Serverless</p>
-                        </Card.Text>
-                    </Card.Body>
-                </Card>
-
-                <Card style={{ width: '18rem', height: '23rem' }}>
-                    <Card.Body>
-                        <Card.Title>Tools</Card.Title>
-                        <Card.Text as="div">
-                            <p>Burpsuite</p>
-                            <p>Postman</p>
                         </Card.Text>
                     </Card.Body>
                 </Card>
@@ -121,10 +120,10 @@ const Tech = () => {
     )
 }
 
-const Work = ({link, title, text, img}) => {
+const Work = ({ link, title, text, img, styles }) => {
     return (
-        <Card style={{ width: '18rem', height: '23rem', marginTop: 10}} className="work-card suffice">
-            <a href={link} style={{textDecoration: 'none'}} target="_blank" rel="noopener noreferrer">
+        <Card style={{ width: '18rem', height: '23rem', marginTop: 10, marginLeft: 50, ...styles }} className="work-card suffice">
+            <a href={link} style={{ textDecoration: 'none' }} target="_blank" rel="noopener noreferrer">
                 <Card.Img variant="top" className="card-img" src={img} />
             </a >
             <Card.Body>
@@ -140,7 +139,7 @@ const Work = ({link, title, text, img}) => {
 const Works = () => {
     return (
         <div className="Works">
-            <h3 style={{fontSize: 50, textAlign: 'center'}}>My Works!!!</h3>
+            <h3 style={{ fontSize: 50, textAlign: 'center' }}>My Works!!!</h3>
             <div className="work-cards">
                 <Work
                     link="https://akash76.github.io/hfl-data-extraction/"
@@ -171,7 +170,7 @@ const Works = () => {
                 />
 
                 <Work
-                    link="https://tetradsquare.herokuapp.com/"
+                    link="https://akashchekka.com/tetrads/"
                     title="Magic Squares generator"
                     text="A web application which can generate all possible magic squares by giving date of birth"
                     img={Tetrad}
@@ -193,9 +192,9 @@ const Contact = () => {
 
     const handleClose = (event, reason) => {
         if (reason === 'clickaway') {
-          return;
+            return;
         }
-    
+
         setOpen(false);
     };
 
@@ -216,38 +215,38 @@ const Contact = () => {
     return (
         <div className="Contact" ref={contactRef}>
             <div className="card formcard">
-                <h3 className="head" style={{ textAlign: 'center', paddingTop: 20, paddingBottom: 50}}>Connect with me</h3>  
+                <h3 className="head" style={{ textAlign: 'center', paddingTop: 20, paddingBottom: 50 }}>Connect with me</h3>
                 <Form onSubmit={onSubmit}>
-                    <div style={{display: 'flex', justifyContent: 'space-between'}} className="mob3">
+                    <div style={{ display: 'flex', justifyContent: 'space-between' }} className="mob3">
                         <Form.Group size="lg" controlId="name">
                             <Form.Control
-                            type="text"
-                            value={fields.name}
-                            placeholder="Name"
-                            style={{ backgroundColor: 'inherit' }}
-                            className="textarea"
-                            onChange={handleFieldChange}
+                                type="text"
+                                value={fields.name}
+                                placeholder="Name"
+                                style={{ backgroundColor: 'inherit' }}
+                                className="textarea"
+                                onChange={handleFieldChange}
                             />
                         </Form.Group>
                         <Form.Group size="lg" controlId="email">
                             <Form.Control
-                            type="text"
-                            value={fields.email}
-                            placeholder="Email"
-                            style={{ backgroundColor: 'inherit' }}
-                            className="textarea"
-                            onChange={handleFieldChange}
+                                type="text"
+                                value={fields.email}
+                                placeholder="Email"
+                                style={{ backgroundColor: 'inherit' }}
+                                className="textarea"
+                                onChange={handleFieldChange}
                             />
                         </Form.Group>
                     </div>
                     <Form.Group controlId="message">
                         <Form.Control
-                        type="text"
-                        value={fields.message}
-                        placeholder="Message"
-                        style={{height: 100, backgroundColor: 'inherit'}}
-                        className="textarea"
-                        onChange={handleFieldChange}
+                            type="text"
+                            value={fields.message}
+                            placeholder="Message"
+                            style={{ height: 100, backgroundColor: 'inherit' }}
+                            className="textarea"
+                            onChange={handleFieldChange}
                         />
                     </Form.Group>
                     <LoaderButton
@@ -289,7 +288,7 @@ function Home() {
             <About />
             <Tech />
             <Works />
-            <Contact />
+            {/* <Contact /> */}
             <Footer />
         </div>
     )

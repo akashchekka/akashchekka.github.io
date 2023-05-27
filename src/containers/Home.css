@@ -4,7 +4,7 @@
     */
     .Face {
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         background: linear-gradient(173deg, var(--primary) 70%, var(--secondary) calc(70% + 2px));
         min-height: 100vh;
         overflow: hidden;
@@ -16,6 +16,10 @@
 
     .big {
         font-size: 60px;
+    }
+
+    .larger {
+        font-size: larger;
     }
 
     .icons {
@@ -59,6 +63,7 @@
         background: linear-gradient(173deg, var(--tertiary) 70%, var(--quaternary) calc(70% + 2px));
         min-height: 80vh;
         overflow: hidden;
+        padding-top: 120px;
     }
 
     .head {
@@ -74,6 +79,12 @@
         border-radius: 10px;
         margin-top: 20px;
         border: 1px solid rgba( 255, 255, 255, 0.18 );
+    }
+
+    .card-title {
+        /* 3 px gap between title and underline */
+        padding-bottom: 5px;
+        border-bottom: 1px solid rgba( 255, 255, 255, 0.18 );
     }
 
     .card-text, .card-title {
@@ -170,9 +181,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: var(--primary);
+        background-color: var(--secondary);
         width: 100%;
         height: 80px;
-        border-top: 1px solid rgba(92, 87, 87, 0.58);
+        /* border-top: 1px solid rgba(92, 87, 87, 0.58); */
     }
 }

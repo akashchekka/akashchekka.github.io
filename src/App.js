@@ -28,16 +28,15 @@ function App() {
             </Navbar.Brand>
           </Link>
           <Navbar.Toggle />
-          <Navbar.Collapse className="justify-content-end" style={{paddingRight: 50}}>
+          <Navbar.Collapse className="justify-content-end" style={{ paddingRight: 50 }}>
             <Nav activeKey={window.location.pathname}>
-                <Nav.Link href="https://drive.google.com/file/d/1Ye1KpUdjs78YWJu3Jtq81smM0aMeI7gY/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="effect" style={{color: '#d7d7d7'}}>Resume</Nav.Link>
-                <Nav.Link onClick={() => contactScroll()} className="effect" style={{color: '#d7d7d7'}}>Connect</Nav.Link>
+              {/* <Nav.Link onClick={() => contactScroll()} className="effect" style={{ color: '#d7d7d7' }}>Connect</Nav.Link> */}
             </Nav>
           </Navbar.Collapse>
         </Navbar>
       </div>
       <div>
-        <RefContext.Provider value={{contactRef, homeRef, aboutRef, contactScroll, aboutScroll}}>
+        <RefContext.Provider value={{ contactRef, homeRef, aboutRef, contactScroll, aboutScroll }}>
           <Routes />
         </RefContext.Provider>
       </div>

@@ -33,3 +33,7 @@ input:-webkit-autofill {
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: #d7d7d7 !important;
 }
+
+::-webkit-scrollbar {
+  display: none;
+}
