@@ -1,0 +1,19 @@
+name: React app deployment
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Deploy react app to github pages
+      uses: tanwanimohit/deploy-react-to-ghpages@v1.0.2
+
+    - run : git checkout gh-pages && touch CNAME && echo "akashchekka.com" > CNAME
+      shell: bash
