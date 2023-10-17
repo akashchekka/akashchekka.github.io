@@ -26,7 +26,7 @@ jobs:
       shell: bash
     - run : git --work-tree build add --all
       shell: bash
-    - run : git --work-tree CNAME add
+    - run : git add CNAME
       shell: bash
     # - uses: 1arp/create-a-file-action@0.3
     #   with:
