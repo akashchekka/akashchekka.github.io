@@ -52,8 +52,8 @@ const Face = () => {
             <Icons />
             <div style={{ alignSelf: 'center' }} className="mob1">
                 <p className="color big">Heyy, This is Akash!</p>
-                <p className="larger">Welcome to my world! No one clicked good pic of me to show up here :( :) </p>
-                <Button onClick={aboutScroll}>Know me</Button>
+                <p className="larger">Wanna know more about me?? Checkout profiles on left!!!</p>
+                {/* <Button onClick={aboutScroll}>Know me</Button> */}
             </div>
             <div className="image" />
         </div>
@@ -285,9 +285,9 @@ function Home() {
     return (
         <div className="Home">
             <Face />
-            <About />
-            <Tech />
-            <Works />
+            {/* <About /> */}
+            {/* <Tech /> */}
+            {/* <Works /> */}
             {/* <Contact /> */}
             <Footer />
         </div>
