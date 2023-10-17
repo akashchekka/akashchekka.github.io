@@ -22,13 +22,11 @@ jobs:
       shell: bash
     - run : git --work-tree build add --all
       shell: bash
-    - run : git commit -m "Automatic Deploy action run by github-actions"
-      shell: bash
-    - run : git push origin HEAD:gh-pages --force
-      shell: bash
-    - run : git checkout gh-pages
-      shell: bash
     - run : touch CNAME
       shell: bash
     - run : echo "akashchekka.com" > CNAME
+      shell: bash
+    - run : git commit -m "Automatic Deploy action run by github-actions"
+      shell: bash
+    - run : git push origin HEAD:gh-pages --force
       shell: bash
