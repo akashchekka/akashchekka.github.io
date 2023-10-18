@@ -28,12 +28,6 @@ jobs:
       shell: bash
     - run : git add CNAME
       shell: bash
-    # - uses: 1arp/create-a-file-action@0.3
-    #   with:
-    #     path: ''
-    #     file: 'CNAME'
-    #     content: |
-    #       akashchekka.com
     - run : git commit -m "Automatic Deploy action run by github-actions"
       shell: bash
     - run : git push origin HEAD:gh-pages --force
