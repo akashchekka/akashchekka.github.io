@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkuserdetails=self.webpackChunkuserdetails||[]).push([[283],{283:function(e,r,s){s.r(r);s(791);var t=s(184);r.default=function(){return(0,t.jsx)("div",{style:{height:"100vh",width:"100vw",backgroundColor:"#3d3939"},children:(0,t.jsx)("object",{width:"400",height:"500",type:"application/pdf",data:"/src/Resume.pdf?#zoom=85&scrollbar=0&toolbar=0&navpanes=0",children:(0,t.jsx)("p",{children:"Insert your error message here, if the PDF cannot be displayed."})})})}}}]);
+//# sourceMappingURL=283.672e7b94.chunk.js.map
