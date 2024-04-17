@@ -27,7 +27,7 @@ const Icons = () => {
                 </a>
             </div>
             <div style={{ paddingBottom: 10 }}>
-                <a href="https://github.com/Akash76" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/akashchekka" target="_blank" rel="noopener noreferrer">
                     <Github className="color" />
                 </a>
             </div>
