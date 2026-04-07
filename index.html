@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akash Chekka — Software Developer</title>
+  <meta name="description" content="Software Developer with 6+ years of experience in microservice systems and AI-driven solutions using Python, .NET and Microsoft Azure." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ============ NAV ============ -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav__logo">&lt;AC /&gt;</a>
+    <ul class="nav__links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero" id="hero">
+    <div class="hero__bg">
+      <div class="hero__grid"></div>
+    </div>
+    <div class="hero__content">
+      <p class="hero__label">SOFTWARE DEVELOPER &amp; AI ENGINEER</p>
+      <h1 class="hero__name">Akash<br/><span class="accent">Chekka</span></h1>
+      <p class="hero__bio">Building scalable microservices &amp; production-grade generative AI systems with 6+ years of crafting solutions on Microsoft Azure.</p>
+      <div class="hero__cta">
+        <a href="#projects" class="btn btn--primary">View Projects</a>
+        <a href="#contact" class="btn btn--outline">Get In Touch</a>
+      </div>
+      <div class="hero__typer">
+        <span class="typer__prompt">~/akash $</span>
+        <span class="typer__text" id="typerText"></span><span class="typer__caret"></span>
+      </div>
+    </div>
+    <div class="hero__terminal">
+      <div class="terminal">
+        <div class="terminal__bar">
+          <span class="terminal__dot terminal__dot--red"></span>
+          <span class="terminal__dot terminal__dot--yellow"></span>
+          <span class="terminal__dot terminal__dot--green"></span>
+          <span class="terminal__title">akash@dev ~</span>
+        </div>
+        <div class="terminal__body">
+          <p><span class="t-prompt">$</span> <span class="t-cmd">whoami</span></p>
+          <p class="t-output">Akash Chekka</p>
+          <p><span class="t-prompt">$</span> <span class="t-cmd">cat skills.json | head</span></p>
+          <p class="t-output">{</p>
+          <p class="t-output">&nbsp;&nbsp;"languages": ["C#", "Python", "Node.js"],</p>
+          <p class="t-output">&nbsp;&nbsp;"cloud": "Microsoft Azure",</p>
+          <p class="t-output">&nbsp;&nbsp;"ai": ["LangGraph", "RAG", "Agentic"],</p>
+          <p class="t-output">&nbsp;&nbsp;"certified": "AI-102 Azure AI Engineer"</p>
+          <p class="t-output">}</p>
+          <p><span class="t-prompt">$</span> <span class="t-cursor">|</span></p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section about" id="about">
+    <div class="container">
+      <h2 class="section__title"><span class="accent">//</span> About Me</h2>
+      <div class="about__content">
+        <div class="about__text">
+          <p>Software Developer with <strong>6+ years</strong> of experience in microservice systems and AI-driven solutions using <strong>Python, .NET and Microsoft Azure</strong>.</p>
+          <p>Proven expertise in designing scalable, multi-tenant microservices with event-driven architectures. Strong background in building production-grade <strong>generative AI and agentic systems</strong> leveraging Azure OpenAI.</p>
+          <p>Active contributor to the Azure Developer Community — delivering technical sessions on Azure OpenAI and hands-on workshops to 200+ college students and IT professionals.</p>
+        </div>
+        <div class="about__highlights">
+          <div class="highlight-card">
+            <span class="highlight-card__icon">&#9889;</span>
+            <h3>Innovation Catalyst</h3>
+            <p>Recognized with organizational award at Microsoft's Global Center for Innovation and Delivery.</p>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-card__icon">&#127891;</span>
+            <h3>Azure AI Certified</h3>
+            <p>AI-102 — Azure AI Engineer Associate</p>
+          </div>
+          <div class="highlight-card">
+            <span class="highlight-card__icon">&#127908;</span>
+            <h3>Community Speaker</h3>
+            <p>300+ attendees at Airlift, Tech Connect, and university workshops.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="section skills" id="skills">
+    <div class="container">
+      <h2 class="section__title"><span class="accent">//</span> Tech Stack</h2>
+      <div class="skills__grid">
+        <div class="skill-group">
+          <h3 class="skill-group__title">Languages</h3>
+          <div class="skill-tags">
+            <span class="tag">C#</span>
+            <span class="tag">Python</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">SQL</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group__title">Generative AI</h3>
+          <div class="skill-tags">
+            <span class="tag">LangChain</span>
+            <span class="tag">LangGraph</span>
+            <span class="tag">RAG</span>
+            <span class="tag">Vector DB</span>
+            <span class="tag">Context Engineering</span>
+            <span class="tag">MCP</span>
+            <span class="tag">Agentic Workflows</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group__title">Frameworks &amp; Cloud</h3>
+          <div class="skill-tags">
+            <span class="tag">.NET</span>
+            <span class="tag">Azure Functions</span>
+            <span class="tag">Azure OpenAI</span>
+            <span class="tag">Azure AI Search</span>
+            <span class="tag">Azure APIM</span>
+            <span class="tag">Azure DevOps</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section experience" id="experience">
+    <div class="container">
+      <h2 class="section__title"><span class="accent">//</span> Experience</h2>
+      <div class="timeline">
+
+        <!-- Microsoft - SC -->
+        <div class="timeline__item">
+          <div class="timeline__marker"></div>
+          <div class="timeline__card">
+            <div class="timeline__header">
+              <div>
+                <h3 class="timeline__role">Software Consultant</h3>
+                <p class="timeline__company">Microsoft</p>
+              </div>
+              <span class="timeline__date">Sep 2024 – Present</span>
+            </div>
+            <p class="timeline__location">Hyderabad, India</p>
+            <ul class="timeline__list">
+              <li>Enhanced healthcare claims processing with distributed microservices — 500k+ records with fault-tolerant patterns.</li>
+              <li>Architected factory pattern-based data access layer with per-tenant database routing and configurable connection pooling.</li>
+              <li>Built TMS for multilingual content delivery across 20+ languages using Azure DevOps pipelines.</li>
+              <li>Created AI-powered release notes automation with Azure OpenAI &amp; Durable Functions — reduced manual effort by 80% (14+ hrs/sprint). Published as IP.</li>
+              <li>Delivered sessions on AI Search &amp; Vector Compression to 300+ attendees at Airlift and Tech Connect (95% positive feedback).</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Microsoft - ASC -->
+        <div class="timeline__item">
+          <div class="timeline__marker"></div>
+          <div class="timeline__card">
+            <div class="timeline__header">
+              <div>
+                <h3 class="timeline__role">Associate Software Consultant</h3>
+                <p class="timeline__company">Microsoft</p>
+              </div>
+              <span class="timeline__date">Dec 2021 – Aug 2024</span>
+            </div>
+            <ul class="timeline__list">
+              <li>Led AWS Lambda → Azure Functions migration (~20 functions) and modernized banking apps to Azure.</li>
+              <li>Optimized payment processing workflows handling 400k+ records per batch run with Azure Functions &amp; Service Bus.</li>
+              <li>Co-designed Access Control Library (ACL) enforcing fine-grained authorization across 300+ APIs.</li>
+              <li>Delivered .NET upgrades and resolved component governance vulnerabilities across 10+ packages.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- TCS -->
+        <div class="timeline__item">
+          <div class="timeline__marker"></div>
+          <div class="timeline__card">
+            <div class="timeline__header">
+              <div>
+                <h3 class="timeline__role">Systems Engineer</h3>
+                <p class="timeline__company">Tata Consultancy Services</p>
+              </div>
+              <span class="timeline__date">Jun 2019 – Dec 2021</span>
+            </div>
+            <p class="timeline__location">Bengaluru, India</p>
+            <ul class="timeline__list">
+              <li>Conducted security analysis for 20+ Android, API, and Web applications.</li>
+              <li>Built end-to-end automation framework for security assessments using MERN stack — cut manual workload by 75%.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <h2 class="section__title"><span class="accent">//</span> Projects</h2>
+      <div class="project-card project-card--featured">
+        <div class="project-card__header">
+          <div class="project-card__icon">&#129302;</div>
+          <div>
+            <h3 class="project-card__name">OrganAIze</h3>
+            <p class="project-card__tagline">A self-assembling AI team</p>
+          </div>
+        </div>
+        <p class="project-card__desc">
+          Self-organizing multi-agent AI framework using LangGraph and LiteLLM. Agents dynamically spawn specialists, coordinate parallel execution, and synthesize results — all with built-in budget controls and token tracking.
+        </p>
+        <div class="project-card__features">
+          <div class="feature">
+            <span class="feature__dot"></span>
+            <span><strong>Self-Organizing</strong> — Agents spawn specialists autonomously</span>
+          </div>
+          <div class="feature">
+            <span class="feature__dot"></span>
+            <span><strong>Recursive Spawning</strong> — Depth limits, budget halving, global caps</span>
+          </div>
+          <div class="feature">
+            <span class="feature__dot"></span>
+            <span><strong>Zero Dependencies</strong> — Pure in-memory, file-based output</span>
+          </div>
+          <div class="feature">
+            <span class="feature__dot"></span>
+            <span><strong>Cost Transparency</strong> — Per-agent token tracking &amp; session caps</span>
+          </div>
+          <div class="feature">
+            <span class="feature__dot"></span>
+            <span><strong>Provider-Agnostic</strong> — OpenAI, Azure, Anthropic, Ollama</span>
+          </div>
+          <div class="feature">
+            <span class="feature__dot"></span>
+            <span><strong>Enterprise Safety</strong> — Tool allowlists &amp; spawn controls</span>
+          </div>
+        </div>
+        <div class="project-card__tags">
+          <span class="tag">LangGraph</span>
+          <span class="tag">LiteLLM</span>
+          <span class="tag">Python</span>
+          <span class="tag">Multi-Agent</span>
+          <span class="tag">Agentic AI</span>
+        </div>
+        <div class="project-card__links">
+          <a href="https://akashchekka.com/OrganAIze/" class="btn btn--primary btn--sm" target="_blank" rel="noopener noreferrer">Live Demo</a>
+          <a href="https://github.com/akashchekka/OrganAIze" class="btn btn--outline btn--sm" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EDUCATION ============ -->
+  <section class="section education" id="education">
+    <div class="container">
+      <h2 class="section__title"><span class="accent">//</span> Education</h2>
+      <div class="edu-card">
+        <div class="edu-card__icon">&#127979;</div>
+        <div>
+          <h3>Bachelor of Technology</h3>
+          <p class="edu-card__school">RVR &amp; JC College of Engineering</p>
+          <p class="edu-card__meta">2015 – 2019 &nbsp;|&nbsp; Guntur, India</p>
+          <p class="edu-card__detail">Electronics and Communication Engineering — <strong>9.18 CGPA</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <h2 class="section__title"><span class="accent">//</span> Get In Touch</h2>
+      <p class="contact__text">Have an interesting project or want to collaborate? Let's connect.</p>
+      <div class="contact__links">
+        <a href="https://www.linkedin.com/in/akashchekka/" class="contact-card" target="_blank" rel="noopener noreferrer">
+          <svg class="contact-card__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <span>LinkedIn</span>
+        </a>
+        <a href="https://github.com/akashchekka/" class="contact-card" target="_blank" rel="noopener noreferrer">
+          <svg class="contact-card__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          <span>GitHub</span>
+        </a>
+        <a href="mailto:chekkaakash1998@gmail.com" class="contact-card">
+          <svg class="contact-card__icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <span>Email</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <p>&lt;AC /&gt; &mdash; Designed &amp; Built by Akash Chekka &copy; 2026</p>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll effect
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav--scrolled', window.scrollY > 40);
+    });
+
+    // Mobile toggle
+    const toggle = document.getElementById('navToggle');
+    const links = document.querySelector('.nav__links');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('nav__links--open');
+      toggle.classList.toggle('nav__toggle--active');
+    });
+
+    // Close menu on link click
+    document.querySelectorAll('.nav__links a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('nav__links--open');
+        toggle.classList.remove('nav__toggle--active');
+      });
+    });
+
+    // Intersection Observer for fade-in
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.section, .timeline__item, .highlight-card, .skill-group').forEach(el => observer.observe(el));
+
+    // Typing role cycler
+    (() => {
+      const phrases = [
+        'Building AI Agents with LangGraph',
+        'Architecting microservices on Azure',
+        'Shipping Generative AI to production',
+        'Migrating workloads to the cloud',
+        'Speaking at tech communities',
+        'Engineering multi-tenant systems',
+        'Exploring agentic workflows & MCP'
+      ];
+      const el = document.getElementById('typerText');
+      let phraseIdx = 0, charIdx = 0, deleting = false;
+      const TYPE_SPEED = 55, DELETE_SPEED = 30, PAUSE = 2000;
+
+      function tick() {
+        const current = phrases[phraseIdx];
+        if (!deleting) {
+          el.textContent = current.substring(0, charIdx + 1);
+          charIdx++;
+          if (charIdx === current.length) {
+            deleting = true;
+            setTimeout(tick, PAUSE);
+            return;
+          }
+          setTimeout(tick, TYPE_SPEED);
+        } else {
+          el.textContent = current.substring(0, charIdx - 1);
+          charIdx--;
+          if (charIdx === 0) {
+            deleting = false;
+            phraseIdx = (phraseIdx + 1) % phrases.length;
+          }
+          setTimeout(tick, DELETE_SPEED);
+        }
+      }
+      tick();
+    })();
+  </script>
+</body>
+</html>
