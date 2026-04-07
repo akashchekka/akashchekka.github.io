@@ -261,13 +261,9 @@ strong {
   color: var(--accent);
 }
 
-.theme-toggle__icon {
-  width: 20px;
-  height: 20px;
-  stroke: currentColor;
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-linejoin: round;
+.theme-toggle__label {
+  font-size: 1.2rem;
+  line-height: 1;
 }
 
 /* Dark mode: show moon, hide sun */
