@@ -324,52 +324,59 @@
 
   <script>
     // Scroll progress bar + navbar
-    const nav = document.getElementById('nav');
-    const scrollBar = document.getElementById('scrollProgress');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('nav--scrolled', window.scrollY > 40);
-      const scrollTop = document.documentElement.scrollTop;
-      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      scrollBar.style.width = (scrollTop / scrollHeight * 100) + '%';
+    var nav = document.getElementById('nav');
+    var scrollBar = document.getElementById('scrollProgress');
+    window.addEventListener('scroll', function() {
+      if (nav) nav.classList.toggle('nav--scrolled', window.scrollY > 40);
+      var scrollTop = document.documentElement.scrollTop;
+      var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      if (scrollBar) scrollBar.style.width = (scrollTop / scrollHeight * 100) + '%';
     });
 
     // Theme toggle
-    const themeBtn = document.getElementById('themeToggle');
-    const savedTheme = localStorage.getItem('theme') || 'dark';
+    var themeBtn = document.getElementById('themeToggle');
+    var savedTheme = localStorage.getItem('theme') || 'dark';
     document.documentElement.setAttribute('data-theme', savedTheme);
-    themeBtn.addEventListener('click', () => {
-      const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', next);
-      localStorage.setItem('theme', next);
-    });
+    if (themeBtn) {
+      themeBtn.addEventListener('click', function() {
+        var current = document.documentElement.getAttribute('data-theme');
+        var next = (current === 'dark') ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+      });
+    }
 
     // Glow card mouse-follow effect
-    const glowCard = document.getElementById('glowCard');
-    glowCard.addEventListener('mousemove', (e) => {
-      const rect = glowCard.getBoundingClientRect();
-      glowCard.style.setProperty('--glow-x', (e.clientX - rect.left) + 'px');
-      glowCard.style.setProperty('--glow-y', (e.clientY - rect.top) + 'px');
-    });
+    var glowCard = document.getElementById('glowCard');
+    if (glowCard) {
+      glowCard.addEventListener('mousemove', function(e) {
+        var rect = glowCard.getBoundingClientRect();
+        glowCard.style.setProperty('--glow-x', (e.clientX - rect.left) + 'px');
+        glowCard.style.setProperty('--glow-y', (e.clientY - rect.top) + 'px');
+      });
+    }
 
     // Mobile toggle
-    const toggle = document.getElementById('navToggle');
-    const links = document.querySelector('.nav__links');
-    toggle.addEventListener('click', () => {
-      links.classList.toggle('nav__links--open');
-      toggle.classList.toggle('nav__toggle--active');
-    });
+    var toggle = document.getElementById('navToggle');
+    var links = document.querySelector('.nav__links');
+    if (toggle) {
+      toggle.addEventListener('click', function() {
+        links.classList.toggle('nav__links--open');
+        toggle.classList.toggle('nav__toggle--active');
+      });
+    }
 
     // Close menu on link click + smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', (e) => {
-        const target = document.querySelector(a.getAttribute('href'));
+    document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+      a.addEventListener('click', function(e) {
+        var target = document.querySelector(a.getAttribute('href'));
         if (target) {
           e.preventDefault();
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
           history.replaceState(null, '', a.getAttribute('href'));
         }
-        links.classList.remove('nav__links--open');
-        toggle.classList.remove('nav__toggle--active');
+        if (links) links.classList.remove('nav__links--open');
+        if (toggle) toggle.classList.remove('nav__toggle--active');
       });
     });
 
