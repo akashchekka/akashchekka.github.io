@@ -26,10 +26,6 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav__right">
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-        <span class="theme-toggle__label theme-toggle__sun">☀︎</span>
-        <span class="theme-toggle__label theme-toggle__moon">☾</span>
-      </button>
       <button class="nav__toggle" id="navToggle" aria-label="Toggle navigation">
         <span></span><span></span><span></span>
       </button>
@@ -332,19 +328,6 @@
       var scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       if (scrollBar) scrollBar.style.width = (scrollTop / scrollHeight * 100) + '%';
     });
-
-    // Theme toggle
-    var themeBtn = document.getElementById('themeToggle');
-    var savedTheme = localStorage.getItem('theme') || 'dark';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    if (themeBtn) {
-      themeBtn.addEventListener('click', function() {
-        var current = document.documentElement.getAttribute('data-theme');
-        var next = (current === 'dark') ? 'light' : 'dark';
-        document.documentElement.setAttribute('data-theme', next);
-        localStorage.setItem('theme', next);
-      });
-    }
 
     // Glow card mouse-follow effect
     var glowCard = document.getElementById('glowCard');
