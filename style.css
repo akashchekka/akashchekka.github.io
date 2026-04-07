@@ -262,8 +262,12 @@ strong {
 }
 
 .theme-toggle__icon {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 /* Dark mode: show moon, hide sun */
