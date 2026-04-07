@@ -28,6 +28,22 @@
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Light theme overrides */
+[data-theme="light"] {
+  --bg-primary: #f5f7fa;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f0f2f5;
+  --bg-elevated: #e8ecf1;
+  --accent: #0d9488;
+  --accent-glow: #14b8a6;
+  --accent-dim: rgba(13, 148, 136, 0.08);
+  --accent-border: rgba(13, 148, 136, 0.2);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --border: #e2e8f0;
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
@@ -96,6 +112,21 @@ strong {
 .skill-group:nth-child(3) { transition-delay: 0.2s; }
 .timeline__item:nth-child(2) { transition-delay: 0.12s; }
 .timeline__item:nth-child(3) { transition-delay: 0.24s; }
+
+/* ========================================
+   SCROLL PROGRESS BAR
+   ======================================== */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background: linear-gradient(90deg, var(--accent), var(--accent-glow));
+  z-index: 1100;
+  transition: width 0.05s linear;
+  box-shadow: 0 0 8px rgba(0, 229, 160, 0.4);
+}
 
 /* ========================================
    NAV
@@ -189,6 +220,39 @@ strong {
 }
 
 /* ========================================
+   THEME TOGGLE
+   ======================================== */
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 7px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-secondary);
+  transition: all var(--transition);
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.theme-toggle__icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Dark mode: show moon, hide sun */
+.theme-toggle__sun { display: none; }
+.theme-toggle__moon { display: block; }
+
+[data-theme="light"] .theme-toggle__sun { display: block; }
+[data-theme="light"] .theme-toggle__moon { display: none; }
+
+/* ========================================
    HERO
    ======================================== */
 .hero {
@@ -270,6 +334,11 @@ strong {
   border: 1px solid var(--border);
   border-radius: 8px;
   min-height: 50px;
+}
+
+[data-theme="light"] .hero__typer {
+  background: var(--bg-card);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .typer__prompt {
@@ -654,6 +723,40 @@ strong {
 /* ========================================
    PROJECTS
    ======================================== */
+.glow-card {
+  --glow-x: 50%;
+  --glow-y: 50%;
+  position: relative;
+}
+
+.glow-card::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: radial-gradient(
+    400px circle at var(--glow-x) var(--glow-y),
+    rgba(0, 229, 160, 0.2),
+    transparent 60%
+  );
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.glow-card:hover::after {
+  opacity: 1;
+}
+
+[data-theme="light"] .glow-card::after {
+  background: radial-gradient(
+    400px circle at var(--glow-x) var(--glow-y),
+    rgba(13, 148, 136, 0.12),
+    transparent 60%
+  );
+}
+
 .project-card--featured {
   background: var(--bg-card);
   border: 1px solid var(--accent-border);
@@ -869,6 +972,10 @@ strong {
     justify-content: center;
   }
 
+  .hero__typer {
+    justify-content: center;
+  }
+
   .terminal {
     width: 100%;
     max-width: 400px;
@@ -919,6 +1026,10 @@ strong {
   .hero__stats {
     flex-wrap: wrap;
     gap: 24px;
+  }
+
+  .hero__typer {
+    font-size: 0.82rem;
   }
 
   .section {
