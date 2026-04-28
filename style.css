@@ -730,10 +730,17 @@ strong {
   padding: 36px;
   position: relative;
   overflow: hidden;
+  margin-bottom: 32px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card--featured + .project-card--featured {
-  margin-top: 32px;
+.project-card--featured:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.project-card--featured:last-child {
+  margin-bottom: 0;
 }
 
 .project-card--featured::before {
