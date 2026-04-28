@@ -221,7 +221,7 @@
   <section class="section projects" id="projects">
     <div class="container">
       <h2 class="section__title"><span class="accent">//</span> Projects</h2>
-      <div class="project-card project-card--featured glow-card" id="glowCard">
+      <div class="project-card project-card--featured glow-card">
         <div class="project-card__header">
           <div class="project-card__icon">&#129302;</div>
           <div>
@@ -268,6 +268,56 @@
         <div class="project-card__links">
           <a href="https://akashchekka.com/OrganAIze/" class="btn btn--primary btn--sm" target="_blank" rel="noopener noreferrer">Live Demo</a>
           <a href="https://github.com/akashchekka/OrganAIze" class="btn btn--outline btn--sm" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+
+      <div class="project-card project-card--featured glow-card">
+        <div class="project-card__header">
+          <div class="project-card__icon">&#129504;</div>
+          <div>
+            <h3 class="project-card__name">Memor</h3>
+            <p class="project-card__tagline">Memory that sticks across sessions</p>
+          </div>
+        </div>
+        <p class="project-card__desc">
+          Local memory persistence for AI coding assistants. Stores project context on disk, indexes it with a full search engine, and gives every tool exactly the right memories within a token budget. Zero cloud, zero daemon, just files.
+        </p>
+        <div class="project-card__features">
+          <div class="feature">
+            <span class="feature__dot"></span>
+            <span><strong>Local-First</strong> — All data stays on disk, no cloud or telemetry</span>
+          </div>
+          <div class="feature">
+            <span class="feature__dot"></span>
+            <span><strong>Full Indexing Engine</strong> — Trigram + BM25 + Bloom filter for sub-ms retrieval</span>
+          </div>
+          <div class="feature">
+            <span class="feature__dot"></span>
+            <span><strong>Token-Budgeted</strong> — Never exceeds the configured context budget</span>
+          </div>
+          <div class="feature">
+            <span class="feature__dot"></span>
+            <span><strong>Tool-Agnostic</strong> — Copilot, Claude Code, Cursor, Windsurf</span>
+          </div>
+          <div class="feature">
+            <span class="feature__dot"></span>
+            <span><strong>Append-Only Writes</strong> — LSM-tree inspired WAL + compaction architecture</span>
+          </div>
+          <div class="feature">
+            <span class="feature__dot"></span>
+            <span><strong>Zero Config</strong> — <code>memor init</code> and done, ships as a single binary</span>
+          </div>
+        </div>
+        <div class="project-card__tags">
+          <span class="tag">Go</span>
+          <span class="tag">CLI</span>
+          <span class="tag">BM25</span>
+          <span class="tag">Trigram Index</span>
+          <span class="tag">npm</span>
+        </div>
+        <div class="project-card__links">
+          <a href="https://akashchekka.com/memor/" class="btn btn--primary btn--sm" target="_blank" rel="noopener noreferrer">Website</a>
+          <a href="https://github.com/akashchekka/memor" class="btn btn--outline btn--sm" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
       </div>
     </div>
@@ -330,14 +380,13 @@
     });
 
     // Glow card mouse-follow effect
-    var glowCard = document.getElementById('glowCard');
-    if (glowCard) {
-      glowCard.addEventListener('mousemove', function(e) {
-        var rect = glowCard.getBoundingClientRect();
-        glowCard.style.setProperty('--glow-x', (e.clientX - rect.left) + 'px');
-        glowCard.style.setProperty('--glow-y', (e.clientY - rect.top) + 'px');
+    document.querySelectorAll('.glow-card').forEach(function(card) {
+      card.addEventListener('mousemove', function(e) {
+        var rect = card.getBoundingClientRect();
+        card.style.setProperty('--glow-x', (e.clientX - rect.left) + 'px');
+        card.style.setProperty('--glow-y', (e.clientY - rect.top) + 'px');
       });
-    }
+    });
 
     // Mobile toggle
     var toggle = document.getElementById('navToggle');
