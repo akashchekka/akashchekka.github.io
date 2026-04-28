@@ -732,6 +732,10 @@ strong {
   overflow: hidden;
 }
 
+.project-card--featured + .project-card--featured {
+  margin-top: 32px;
+}
+
 .project-card--featured::before {
   content: '';
   position: absolute;
